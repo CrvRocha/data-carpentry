@@ -59,7 +59,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=description)
     
     parser.add_argument("infile", type=str, help="Input file name")
-    parser.add_argument("month", type=str, help="Month to plot")
+    parser.add_argument("month", type=str, choices=calendar.month_abbr[1:], 
+                    help="Month to plot")
     parser.add_argument("outfile", type=str, help="Output file name")
 
     args = parser.parse_args()
